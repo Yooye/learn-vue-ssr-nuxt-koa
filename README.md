@@ -1,4 +1,4 @@
-# mt-app
+# nuxt-koa-ssr-app
 
 > My geometric Nuxt.js project
 
