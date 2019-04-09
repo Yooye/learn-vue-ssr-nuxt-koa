@@ -12,14 +12,36 @@
                         <template slot="prepend">密&nbsp;&nbsp;  码</template>
                     </el-input>
 
-                    <el-button type="primary">登录</el-button>
+                    <el-button type="primary" @click="register">注册</el-button>
                 </div>
             </div>
         </el-col>
     </el-row>
     </div>
 </template>
-
+<script>
+import axios from 'axios'
+export default {
+  data() {
+    return {
+      input3: '',
+      input4: '',
+      input5: '',
+      select: ''
+    }
+  },
+  layout(){
+      return 'login'
+  },
+  methods: {
+    register(){
+        axios.get('/register').then(function(res){
+            console.log(res);
+        })
+    }
+  },
+}
+</script>
 <style>
   .el-select .el-input {
     width: 130px;
@@ -44,18 +66,3 @@
       width: 100%;
   }
 </style>
-<script>
-export default {
-  data() {
-    return {
-      input3: '',
-      input4: '',
-      input5: '',
-      select: ''
-    }
-  },
-  layout(){
-      return 'login'
-  }
-}
-</script>
