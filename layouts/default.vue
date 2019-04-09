@@ -8,7 +8,7 @@
 					</h1>
 					<ul class="nav-aside">
 						<li class="nav-user">
-							<a href="javascript:;">个人中心</a>
+							<nuxt-link to='/login'>个人中心</nuxt-link>
 							<!--active-->
 							<div class="nav-user-wrapper">
 								<div class="nav-user-list">
